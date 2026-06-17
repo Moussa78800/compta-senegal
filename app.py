@@ -18,7 +18,7 @@ def check_password():
         password = st.text_input("Mot de passe", type="password")
         if st.button("🔓 Se connecter", type="primary"):
             # ⚠️ CHANGEZ CE MOT DE PASSE par celui que vous voulez
-            if password == "CheikhFall2026!":
+            if password == st.secrets["APP_PASSWORD"]:
                 st.session_state.authenticated = True
                 st.success("✅ Connexion réussie !")
                 st.rerun()
